@@ -116,10 +116,9 @@ There are three types of users:
 - **Data Encryption:** Secure storage and transmission of user data and content.
 - **Authentication Protection:** Robust security measures to prevent unauthorized access and data breaches.
 
-## 4.4 Usability
+## 4.4 Usability and maintainability
 - **Intuitive Interface:** Easy-to-use and visually appealing interface suitable for a wide range of users.
 - **Consistent Experience:** Provide a seamless and engaging experience across different devices and screen sizes.
 
-## 4.5 Maintainability
-- **Well-Documented Code:** Clear documentation and adherence to coding best practices for ease of future updates and maintenance.
-- **Testing and CI/CD:** Implement automated testing and continuous integration to ensure system stability.
+ Clear documentation and adherence to coding best practices for ease of future updates and maintenance.
+
