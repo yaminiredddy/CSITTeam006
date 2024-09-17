@@ -77,39 +77,49 @@ There are three types of users:
 3. **Monitor Activity**
    - Admins can monitor general platform activity, such as pin uploads, comments, and user interactions, to ensure a safe environment.
 
-Functional Requirements
-1. User Management
-Account Creation: Users can sign up using email or social media accounts.
-Profile Management: Users can create, edit, and view their profiles, including uploading profile pictures and setting preferences.
-Authentication: Secure login/logout processes, password recovery, and multi-factor authentication.
-2. Content Management
-Pinning: Users can upload and pin images and videos to their boards.
-Board Management: Users can create, edit, organize, and delete boards.
-Content Discovery: Users can search for pins and boards using keywords and filters.
-3. Social Features
-Following: Users can follow other users and be followed.
-Engagement: Users can like, comment on, and repin other users’ pins.
-Sharing: Users can share pins and boards via social media or direct links.
-4. Notifications
-Activity Alerts: Notifications for interactions on user’s pins and boards (likes, comments, repins).
-Messages: Notifications for new messages or updates from followed users.
-5. User Interface
-Dashboard: A personalized dashboard showing user's boards, pins, and recommended content.
-Responsive Design: Optimized for desktop, tablet, and mobile devices.
-Non-Functional Requirements
-4.1 Performance
-High Concurrency: Support for simultaneous users interacting with the platform (uploading, pinning, browsing).
-Low Latency: Fast loading times for images, boards, and user interactions.
-4.2 Scalability
-User Growth: Handle increasing numbers of users, pins, and boards efficiently.
-Content Volume: Scale backend infrastructure to support a growing amount of content.
-4.3 Security
-Data Encryption: Secure storage and transmission of user data and content.
-Authentication Protection: Robust security measures to prevent unauthorized access and data breaches.
-4.4 Usability
-Intuitive Interface: Easy-to-use and visually appealing interface suitable for a wide range of users.
-Consistent Experience: Provide a seamless and engaging experience across different devices and screen sizes.
-4.5  Maintainability
-Well-Documented Code: Clear documentation and adherence to coding best practices for ease of future updates and maintenance.
-Testing and CI/CD: Implement automated testing and continuous integration to ensure system stability.
+# Functional Requirements
 
+## 1. User Management
+- **Account Creation:** Users can sign up using email or social media accounts.
+- **Profile Management:** Users can create, edit, and view their profiles, including uploading profile pictures and setting preferences.
+- **Authentication:** Secure login/logout processes, password recovery, and multi-factor authentication.
+
+## 2. Content Management
+- **Pinning:** Users can upload and pin images and videos to their boards.
+- **Board Management:** Users can create, edit, organize, and delete boards.
+- **Content Discovery:** Users can search for pins and boards using keywords and filters.
+
+## 3. Social Features
+- **Following:** Users can follow other users and be followed.
+- **Engagement:** Users can like, comment on, and repin other users’ pins.
+- **Sharing:** Users can share pins and boards via social media or direct links.
+
+## 4. Notifications
+- **Activity Alerts:** Notifications for interactions on user’s pins and boards (likes, comments, repins).
+- **Messages:** Notifications for new messages or updates from followed users.
+
+## 5. User Interface
+- **Dashboard:** A personalized dashboard showing user's boards, pins, and recommended content.
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
+
+# Non-Functional Requirements
+
+## 4.1 Performance
+- **High Concurrency:** Support for simultaneous users interacting with the platform (uploading, pinning, browsing).
+- **Low Latency:** Fast loading times for images, boards, and user interactions.
+
+## 4.2 Scalability
+- **User Growth:** Handle increasing numbers of users, pins, and boards efficiently.
+- **Content Volume:** Scale backend infrastructure to support a growing amount of content.
+
+## 4.3 Security
+- **Data Encryption:** Secure storage and transmission of user data and content.
+- **Authentication Protection:** Robust security measures to prevent unauthorized access and data breaches.
+
+## 4.4 Usability
+- **Intuitive Interface:** Easy-to-use and visually appealing interface suitable for a wide range of users.
+- **Consistent Experience:** Provide a seamless and engaging experience across different devices and screen sizes.
+
+## 4.5 Maintainability
+- **Well-Documented Code:** Clear documentation and adherence to coding best practices for ease of future updates and maintenance.
+- **Testing and CI/CD:** Implement automated testing and continuous integration to ensure system stability.
