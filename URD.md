@@ -79,9 +79,3 @@ There are three types of users:
 
 ---
 
-### 5.2 Scalability
-- The system should be able to handle up to 1 million active users concurrently without performance degradation.
-- The platform should support content uploads, storage, and retrieval efficiently for high volumes of images and videos.
-
-### 5.3 Maintenance
-- Regular database backups should be performed daily to ensure that user data
