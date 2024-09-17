@@ -61,3 +61,56 @@ The Pinterest Clone is a web and mobile application that allows users to visuall
 - The application must be responsive and work on different screen sizes.
 - High-quality images and videos must be optimized for fast load times.
 - Secure image and video uploads with content moderation mechanisms.
+---
+
+## 3. Specific Requirements
+
+### 3.1 Functional Requirements
+
+1. *User Registration and Login*
+   - Users must be able to register with an email or social login.
+   - Users must be able to log in with valid credentials.
+
+2. *Pin and Save Content*
+   - Users can upload images and videos from their devices.
+   - Users can pin content from external websites using a browser extension.
+   - Users can add descriptions, links, and tags to pins.
+
+3. *Board Management*
+   - Users can create new boards, delete existing ones, and manage pins within boards.
+   - Users can set boards to private or public visibility.
+
+4. *Search Functionality*
+   - Users can search for content using keywords, categories, or hashtags.
+   - Search results should include pins, boards, and users that match the criteria.
+
+5. *Follow Users*
+   - Users can follow other users and be notified of their new content.
+   - A user’s homepage feed should be populated with pins from followed users.
+
+6. *Recommendations*
+   - Personalized recommendations should be based on user activity such as saved pins, followed boards, and search history.
+
+7. *Analytics (for Business Users and Content Creators)*
+   - Business users should have access to engagement analytics, including views, repins, and comments.
+   - The system should provide demographic data for audience insights.
+
+### 3.2 Non-Functional Requirements
+
+1. *Performance*
+   - The system should support thousands of simultaneous uploads and interactions without affecting performance.
+   - Pins and boards must load quickly, with minimal latency.
+
+2. *Scalability*
+   - The platform should handle growing user numbers, expanding content volumes, and increasing traffic without degradation.
+
+3. *Security*
+   - User data and media files should be encrypted.
+   - Implement secure user authentication using OAuth 2.0 or equivalent.
+
+4. *Usability*
+   - The interface should be intuitive, ensuring easy navigation for all user types.
+   - Users should be able to easily upload and organize content.
+
+5. *Maintainability*
+   - The codebase must be modular and well-documented for future scalability and maintenance.
