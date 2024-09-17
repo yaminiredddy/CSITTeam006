@@ -3,7 +3,7 @@ CSITTeam006
 
 TEAM NAME: Innopins
 
-TEAM IDEA: Pinterest
+TEAM IDEA: Pinterest(Clone)
 
 
 | **Team Members**                | **Department** | **Roll Number** | **Email**                          | **GitHub Username**   |
