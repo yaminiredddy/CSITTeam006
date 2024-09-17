@@ -116,9 +116,12 @@ There are three types of users:
 - **Data Encryption:** Secure storage and transmission of user data and content.
 - **Authentication Protection:** Robust security measures to prevent unauthorized access and data breaches.
 
-## 4.4 Usability and maintainability
-- **Intuitive Interface:** Easy-to-use and visually appealing interface suitable for a wide range of users.
-- **Consistent Experience:** Provide a seamless and engaging experience across different devices and screen sizes.
+### 4.4 Usability
+- **Intuitive Interface:** Design an easy-to-use, visually appealing interface that caters to a diverse user base. Ensure the navigation is straightforward and accessible to both new and experienced users.
+- **Consistent Experience:** Deliver a seamless and engaging user experience across various devices and screen sizes. Implement responsive design principles to maintain functionality and aesthetics on desktops, tablets, and mobile devices.
+- **User Feedback:** Incorporate mechanisms for gathering and acting on user feedback to continuously improve the interface and user experience.
 
- Clear documentation and adherence to coding best practices for ease of future updates and maintenance.
-
+### 4.5 Maintainability
+- **Clear Documentation:** Maintain comprehensive and up-to-date documentation for code, APIs, and system architecture. This includes inline comments, README files, and user guides to support both current and future developers.
+- **Best Practices:** Follow industry best practices for coding standards and project organization to facilitate easier updates, bug fixes, and collaboration. This includes code modularity, naming conventions, and version control practices.
+- **Testing and CI/CD:** Implement robust testing strategies (unit, integration, and end-to-end tests) and continuous integration/continuous deployment (CI/CD) pipelines to ensure code quality and streamline deployment processes. Regularly review and update test cases and deployment scripts as the project evolves.
