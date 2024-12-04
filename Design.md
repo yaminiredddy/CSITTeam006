@@ -57,8 +57,9 @@ Responsible for sending notifications to users about activities like new followe
 ## 5. Database Design
 
 The Pinterest clone uses a NoSQL database (e.g., MongoDB). Below is the database schema for major entities. 
+![image](https://github.com/user-attachments/assets/85da26f9-89e7-4719-9938-0bf8f63b1d46)
 
-![Database Schema](path/to/database-schema-diagram.png)
+
 
 ### Explanation:
 - **Users**: Stores user details like name, email, preferences.
@@ -78,7 +79,9 @@ Below are some of the REST API endpoints for interaction:
 - `GET /api/boards`: Retrieve user boards
 - `POST /api/boards`: Create a new board
 
-![API Diagram](path/to/api-diagram.png)
+![image](https://github.com/user-attachments/assets/10915ab9-1e14-4bd1-907a-fe7c3a029944)
+
+
 
 ### 6.2 External System Interfaces
 - **Cloud Storage**: Handles image upload and storage (e.g., AWS S3, Google Cloud Storage).
@@ -87,7 +90,8 @@ Below are some of the REST API endpoints for interaction:
 ### 6.3 Notification Flow Diagram
 This diagram represents the flow of notifications between services.
 
-![Notification Flow](path/to/notification-flow-diagram.png)
+![image](https://github.com/user-attachments/assets/10fbe4e5-bf47-4ffc-bfd8-4d5670ceb87f)
+
 
 ## 7. Non-Functional Requirements
 
