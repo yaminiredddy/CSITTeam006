@@ -85,4 +85,40 @@ package "Pinterest Clone Application" {
 }
 @enduml
 
+Deployment Diagram Code
+![image](https://github.com/user-attachments/assets/9082dddd-27b5-4380-a55c-c96164394cc6)
+
+
+@startuml
+!define RECTANGLE class
+
+package "Pinterest Clone Application" {
+    [Mobile Application] <<Mobile Application>> 
+    [Web Application] <<Web Application>> 
+    [User API Gateway] <<API Gateway>> 
+    [User Service] <<Microservice>> 
+    [Board Service] <<Microservice>> 
+    [Pin Service] <<Microservice>> 
+    [Notification Service] <<Microservice>> 
+
+    [User Database] <<Database>> 
+    [Board Database] <<Database>> 
+    [Pin Database] <<Database>> 
+    [Notification System] <<External System>> 
+
+    [Mobile Application] --> [User API Gateway] : API Calls
+    [Web Application] --> [User API Gateway] : API Calls
+    [User API Gateway] --> [User Service] : Manage Users
+    [User API Gateway] --> [Board Service] : Manage Boards
+    [User API Gateway] --> [Pin Service] : Manage Pins
+    [User API Gateway] --> [Notification Service] : Send Notifications
+    [User Service] --> [User Database] : Read/Write Data
+    [Board Service] --> [Board Database] : Read/Write Data
+    [Pin Service] --> [Pin Database] : Read/Write Data
+    [Notification Service] --> [Notification System] : Push Notifications
+}
+@enduml
+
+
+
 
