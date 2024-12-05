@@ -22,8 +22,7 @@ The Container Diagram highlights the primary containers within Pinterest:
 
 ## 3. Component Diagrams
 
-### 3.1 Component Diagram for Users
-![Component Diagram for Users](alt-text)
+![Component Diagram for Users](component_diagram.png)
 
 The User Component Diagram illustrates the interaction flow for regular Pinterest users:
 - **Login and Registration**: Handles user authentication.
@@ -32,16 +31,6 @@ The User Component Diagram illustrates the interaction flow for regular Pinteres
 - **Recommendations**: Provides personalized pin and board suggestions.
 - **Notifications**: Sends alerts to users about activities on their pins or boards.
 
----
-
-### 3.2 Component Diagram for Admin
-![Component Diagram for Admin](Component_Diagram_for_Admin)
-
-The Admin Component Diagram represents features available for Pinterest administrators:
-- **Content Moderation**: Monitor and review user-generated content.
-- **User Management**: Handle user account suspensions and privileges.
-- **Analytics Dashboard**: Analyze platform metrics like user engagement and pin performance.
-- **Advertising Management**: Oversee ad campaigns and promoted content.
 
 ---
 
