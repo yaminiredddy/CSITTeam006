@@ -284,7 +284,7 @@ The Use Case Diagram highlights the primary interactions between actors (User, A
 - **User**: Browses content, creates pins and boards, saves or shares pins, and follows other users.
 - **Admin**: Monitors user activities, moderates reported content, and manages platform policies.
 
-![image](https://github.com/user-attachments/assets/9d0f6dbc-9ef8-4607-b6d3-d4acf1ec85b8)
+
 
 
 ### Abuse Case Diagram
