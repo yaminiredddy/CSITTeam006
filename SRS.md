@@ -257,4 +257,75 @@ The application will utilize the following communication protocols and interface
 - Content filtering systems shall ensure compliance with local laws and regulations.
 
 ---
+# Appendices
+
+## Appendix A: Glossary of Terms
+
+- **User**: An individual who interacts with the Pinterest clone system, including browsing, saving, and creating pins or boards.
+- **Admin**: A system administrator who manages platform activities, moderates content, and ensures smooth functioning.
+- **Happy Path**: A standard sequence of actions without exception handling.
+- **Abuse Case**: Scenarios where the system is misused intentionally by attackers or abusers.
+- **Error Case**: Situations where the system encounters errors, handled through exception mechanisms.
+
+---
+
+## Appendix B: Diagrams
+
+### System Architecture
+The architecture of the Pinterest clone application consists of key components such as:
+- **Frontend**: For user interactions.
+- **Backend**: Handles content management, API processing, and user sessions.
+- **Database**: Stores user data, pins, boards, and other related information.
+
+### Use Case Diagram
+The Use Case Diagram highlights the primary interactions between actors (User, Admin) and the system for actions such as Pin Creation, Board Management, and Content Discovery.
+
+**Actors:**
+- **User**: Browses content, creates pins and boards, saves or shares pins, and follows other users.
+- **Admin**: Monitors user activities, moderates reported content, and manages platform policies.
+
+![image](https://github.com/user-attachments/assets/9d0f6dbc-9ef8-4607-b6d3-d4acf1ec85b8)
+
+
+### Abuse Case Diagram
+The Abuse Case Diagram demonstrates possible misuse scenarios like:
+- Spamming with irrelevant content.
+- Creating fake accounts for fraudulent purposes.
+- Exploiting the system to manipulate content ranking.
+
+Mitigation strategies include content moderation, spam detection mechanisms, and limiting unusual activity patterns.
+
+
+
+### Error Case Diagram
+The Error Case Diagram illustrates scenarios such as:
+- Server unavailability.
+- Content upload failures.
+- Invalid user inputs.
+
+The diagram outlines system responses like retry mechanisms, fallback options, and real-time error notifications for users and admins.
+
+
+
+---
+
+## Appendix C: Detailed Requirements Matrix
+The requirements matrix provides a comprehensive mapping of functional and non-functional requirements for the Pinterest clone application:
+
+1. **User Registration and Login**:
+   - Functional: Users must be able to register via email, social media accounts, or phone number.
+   - Non-Functional: Registration and login processes should not exceed 3 seconds.
+
+2. **Pin and Board Management**:
+   - Functional: Users can create, edit, and delete pins and boards.
+   - Non-Functional: Actions should be reflected in the system within 2 seconds.
+
+3. **Content Discovery**:
+   - Functional: Users can search for content using keywords and filters.
+   - Non-Functional: Search results should display within 2 seconds.
+
+4. **Error Handling**:
+   - Functional: Provide meaningful error messages for failed actions.
+   - Non-Functional: Log errors in real-time and notify admins for prompt resolution.
+
 
