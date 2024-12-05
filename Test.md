@@ -310,3 +310,231 @@ describe('Content Creator - View Analytics', function () {
   - The home feed should display pins relevant to the user's interests.
 
 ---
+---
+
+## **4. Pinterest Platform Features**
+
+---
+
+### **4.1 Feature: Home Feed Personalization**
+
+#### **Scenario: User sees personalized home feed**
+
+- **Given:**
+  - The user is logged in.
+  - The user has interacted with pins (liked, saved, searched, etc.).
+
+- **When:**
+  - The user visits their home feed.
+
+- **Then:**
+  - The home feed should display pins and boards relevant to the user's past activities.
+  - The recommendations should be based on categories, saved boards, and search history.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const homeFeed = require('../pages/homeFeed');
+
+describe('Platform - Home Feed Personalization', function () {
+  it('should display personalized recommendations', function () {
+    homeFeed.open();
+    const feedContent = homeFeed.getFeedRecommendations();
+    expect(feedContent).to.be.an('array').that.is.not.empty;
+    expect(feedContent[0]).to.have.property('category');
+  });
+});
+```
+
+---
+
+### **4.2 Feature: Notifications**
+
+#### **Scenario: User receives notifications**
+
+- **Given:**
+  - The user is logged in.
+
+- **When:**
+  - Another user interacts with their pins (e.g., saves, comments, follows).
+  
+- **Then:**
+  - A notification should appear in the user’s notifications center.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const notificationsPage = require('../pages/notificationsPage');
+
+describe('Platform - Notifications', function () {
+  it('should notify the user about interactions', function () {
+    notificationsPage.open();
+    const notifications = notificationsPage.getNotifications();
+    expect(notifications).to.be.an('array').that.is.not.empty;
+    expect(notifications[0]).to.include('saved your pin');
+  });
+});
+```
+
+---
+
+### **4.3 Feature: Pin Sharing**
+
+#### **Scenario: User shares a pin**
+
+- **Given:**
+  - The user is logged in.
+  - The user is viewing a pin.
+
+- **When:**
+  - The user clicks the "Share" button.
+  - The user selects an external platform (e.g., email, social media).
+
+- **Then:**
+  - The pin’s link should be shared on the selected platform.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const pinPage = require('../pages/pinPage');
+
+describe('Platform - Pin Sharing', function () {
+  it('should share a pin successfully', function () {
+    pinPage.open('pin_id_123');
+    pinPage.clickShareButton();
+    pinPage.selectSharePlatform('Twitter');
+    expect(pinPage.getShareConfirmation()).to.include('Pin shared successfully!');
+  });
+});
+```
+
+---
+
+### **4.4 Feature: Reporting Content**
+
+#### **Scenario: User reports inappropriate content**
+
+- **Given:**
+  - The user is logged in.
+  - The user is viewing a pin or board.
+
+- **When:**
+  - The user clicks the "Report" button.
+  - The user selects a reason and submits the report.
+
+- **Then:**
+  - The report should be logged, and a confirmation message should appear.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const reportPage = require('../pages/reportPage');
+
+describe('Platform - Reporting Content', function () {
+  it('should allow users to report inappropriate content', function () {
+    reportPage.open('pin_id_123');
+    reportPage.clickReportButton();
+    reportPage.selectReason('Inappropriate Content');
+    reportPage.submitReport();
+    expect(reportPage.getReportConfirmation()).to.include('Your report has been submitted');
+  });
+});
+```
+
+---
+
+### **4.5 Feature: Dark Mode**
+
+#### **Scenario: User switches to dark mode**
+
+- **Given:**
+  - The user is logged in.
+
+- **When:**
+  - The user navigates to settings and enables dark mode.
+
+- **Then:**
+  - The Pinterest UI should switch to dark mode across all pages.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const settingsPage = require('../pages/settingsPage');
+
+describe('Platform - Dark Mode', function () {
+  it('should enable dark mode successfully', function () {
+    settingsPage.open();
+    settingsPage.enableDarkMode();
+    expect(settingsPage.getCurrentMode()).to.equal('dark');
+  });
+});
+```
+
+---
+
+## **5. Cross-Platform Testing**
+
+---
+
+### **5.1 Feature: Mobile Responsiveness**
+
+#### **Scenario: Test platform responsiveness on various screen sizes**
+
+- **Given:**
+  - The user accesses Pinterest on a mobile or tablet device.
+
+- **When:**
+  - The user navigates through the homepage, boards, and pins.
+
+- **Then:**
+  - The layout should adjust appropriately for the device.
+  - All functionality should remain intact.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const homeFeed = require('../pages/homeFeed');
+
+describe('Cross-Platform - Mobile Responsiveness', function () {
+  it('should render correctly on a mobile screen', function () {
+    browser.setWindowSize(375, 812); // iPhone X dimensions
+    homeFeed.open();
+    expect(homeFeed.isResponsive()).to.be.true;
+  });
+});
+```
+
+---
+
+### **5.2 Feature: Cross-Browser Compatibility**
+
+#### **Scenario: Test platform on different browsers**
+
+- **Given:**
+  - The user opens Pinterest on various browsers (e.g., Chrome, Firefox, Safari).
+
+- **When:**
+  - The user navigates through key features.
+
+- **Then:**
+  - The platform should function consistently across all browsers.
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const homeFeed = require('../pages/homeFeed');
+
+describe('Cross-Platform - Cross-Browser Compatibility', function () {
+  it('should work consistently on different browsers', function () {
+    const browsers = ['chrome', 'firefox', 'safari'];
+    browsers.forEach((browserName) => {
+      browser.setBrowser(browserName);
+      homeFeed.open();
+      expect(homeFeed.isFunctional()).to.be.true;
+    });
+  });
+});
+```
+
+---
+
