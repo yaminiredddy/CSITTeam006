@@ -310,7 +310,7 @@ describe('Content Creator - View Analytics', function () {
   - The home feed should display pins relevant to the user's interests.
 
 ---
----
+
 
 ## **4. Pinterest Platform Features**
 
