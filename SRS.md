@@ -159,13 +159,102 @@ The Pinterest Clone is a web and mobile application that allows users to visuall
 
 ---
 
-## 4. Appendices
+### 4. Interfaces
 
-### 4.1 Future Enhancements
-- Integration of social media sharing buttons for cross-platform content distribution.
-- Support for video streaming within pins (allowing longer-form video content).
-- Implementation of a paid promotion feature for business users to boost content visibility.
-- Introduction of AI-based image recognition for searching and organizing content.
-- Addition of messaging functionality for direct communication between users.
-- Advanced analytics tools for content creators to analyze long-term trends and engagement metrics.
+#### 4.1 Hardware Interfaces
+The system will interact with the following hardware components:
+
+- **Mobile Device Cameras**: For uploading images and videos directly from user devices.
+- **Touchscreen Interfaces**: Ensuring smooth navigation and interactions on mobile devices.
+- **Storage Hardware**: Leveraging local storage for caching frequently accessed data, enabling faster performance.
+- **Biometric Modules**: For secure login using fingerprints or facial recognition.
+
+#### 4.2 Hardware Interfaces
+The system will interact with the following hardware components:
+
+- **Mobile Device Cameras**: For uploading images and videos directly from user devices.
+- **Touchscreen Interfaces**: Ensuring smooth navigation and interactions on mobile devices.
+- **Storage Hardware**: Leveraging local storage for caching frequently accessed data, enabling faster performance.
+- **Biometric Modules**: For secure login using fingerprints or facial recognition.
+
+#### 4.3 Software Interfaces
+The system will utilize the following software interfaces:
+
+- **Third-Party APIs**:
+  - Image Processing APIs: For optimizing images and videos for upload.
+  - Recommendation System APIs: To provide personalized content suggestions.
+  - Payment APIs: For integrating subscription services for premium features.
+  - Map Services APIs: To support geo-tagging of images and content.
+
+- **Database**:
+  - The system will use MongoDB (NoSQL) for flexible data storage, ensuring efficient retrieval of pins, boards, and user data.
+
+- **Authentication Services**:
+  - OAuth 2.0 for integrating Google and Facebook sign-ins.
+  - Custom token-based authentication for secure session management.
+
+#### 4.4 Communication Interfaces
+The application will utilize the following communication protocols and interfaces:
+
+- **HTTPS Protocol**: Ensures secure data transfer between the client and server, protecting user privacy and data integrity.
+- **WebSocket Protocol**: For real-time updates and notifications such as new follower alerts or recommendations.
+- **Push Notifications**: Enabled on mobile devices to notify users about activities like comments, saves, and recommendations.
+- **REST APIs**: To facilitate interaction between the front-end and back-end components, supporting data retrieval and user actions.
+
+---
+
+### 5. Non-Functional Requirements (NFRs)
+
+#### 5.1 Performance Requirements
+- The application shall load within **2 seconds** on standard devices and networks.
+- The system shall handle **50,000 concurrent users** without significant performance degradation.
+- Search queries shall return results within **1 second** under normal conditions.
+- Content uploads (images/videos) shall be processed and available within **3 seconds**.
+
+#### 5.2 Security Requirements
+- User data shall be encrypted **in transit** (using TLS) and **at rest** (using AES-256).
+- Multi-factor authentication shall be provided for enhanced user account security.
+- Content moderation tools shall detect and prevent the upload of inappropriate or malicious content.
+- Regular security assessments, including penetration testing, shall be conducted to identify vulnerabilities.
+
+#### 5.3 Availability and Reliability
+- The platform shall achieve **99.9% uptime**, ensuring minimal disruption for users.
+- The system shall implement **automatic failover mechanisms** to maintain operations during server failures.
+- Regular **data backups** shall be performed, stored in multiple geographical locations to safeguard against data loss.
+
+#### 5.4 Scalability
+- The architecture shall support **horizontal scaling** to accommodate growing user bases and content volumes.
+- Database systems shall optimize indexing and queries to handle **millions of records** efficiently.
+- The system shall allow for seamless integration of new features without significant refactoring.
+
+#### 5.5 Usability
+- The interface shall be **intuitive and accessible**, catering to users of all skill levels.
+- **Accessibility standards (WCAG 2.1)** shall be adhered to, ensuring inclusivity for users with disabilities.
+- Continuous user feedback mechanisms shall be incorporated to refine and enhance usability.
+
+#### 5.6 Maintainability
+- The system shall adopt a **modular codebase** to simplify updates and maintenance.
+- Comprehensive **documentation** for APIs, database schemas, and application logic shall be maintained.
+- Automated testing tools shall be utilized to ensure that updates do not introduce regressions.
+
+#### 5.7 Compliance
+- The platform shall comply with regulations such as **GDPR** for data privacy and user rights.
+- Payment processing systems shall adhere to **PCI-DSS standards** for secure transactions.
+- Features to facilitate user data export and deletion shall be implemented to comply with privacy laws.
+
+---
+
+### 6. Other Requirements
+
+#### 6.1 Localization
+- The platform shall support **multiple languages**, adapting content and user interfaces to regional preferences.
+- Date, time, and currency formats shall dynamically update based on user location.
+- Search functionality shall account for language-specific nuances, ensuring accurate results.
+
+#### 6.2 Ethical Requirements
+- Reporting mechanisms shall enable users to flag inappropriate or harmful content.
+- Community guidelines shall be clearly defined and enforced to promote a safe and respectful environment.
+- Content filtering systems shall ensure compliance with local laws and regulations.
+
+---
 
