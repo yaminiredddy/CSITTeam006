@@ -1,5 +1,5 @@
 
-# **Pinterest Platform Test Plan**
+# **Features for Pinterest Platform**
 
 ---
 
