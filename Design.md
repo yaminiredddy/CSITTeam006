@@ -7,6 +7,22 @@ The purpose of this Software Design Description (SDD) is to provide a detailed d
 
 ### 1.2 Scope
 The Pinterest clone system enables users to discover, save, and share visual content via a mobile app. Users can create boards, pin images, and explore content shared by others. The system includes the mobile application, backend API services, image processing, real-time communication, and external integration with services like cloud storage and email gateways.
+### 1.3 Overview
+This document outlines the system's architecture, data design, components, and human interface. It also includes design rationales, data flow descriptions, and requirements traceability.
+
+### 1.4 Reference Material
+- IEEE Std 1016-2009: Software Design Descriptions
+- Pinterest Clone System Requirements Specification (SRS)
+
+### 1.5 Definitions and Acronyms
+- **API**: Application Programming Interface
+- **JWT**: JSON Web Token
+- **SRS**: Software Requirements Specification
+- **SDD**: Software Design Document
+- **NoSQL**: Non-Relational Database
+
+## 2. System Overview
+The Pinterest Clone application is a mobile and web platform enabling users to discover, save, and share visual content. The system incorporates user authentication, personalized recommendations, and content organization. It integrates with cloud storage for image hosting and offers real-time notifications for user interactions like comments, likes, and follows.
 
 ## 3. Architecture Design
 
