@@ -278,6 +278,11 @@ The architecture of the Pinterest clone application consists of key components s
 - **Database**: Stores user data, pins, boards, and other related information.
 
 ### Use Case Diagram
+
+![image](https://github.com/user-attachments/assets/80fe4c9a-20cd-4b15-a1b1-2cb380bdf827)
+
+
+
 The Use Case Diagram highlights the primary interactions between actors (User, Admin) and the system for actions such as Pin Creation, Board Management, and Content Discovery.
 
 **Actors:**
@@ -288,6 +293,7 @@ The Use Case Diagram highlights the primary interactions between actors (User, A
 
 
 ### Abuse Case Diagram
+![image](https://github.com/user-attachments/assets/c07f4e84-4d20-41d0-9287-a3f822175861)
 The Abuse Case Diagram demonstrates possible misuse scenarios like:
 - Spamming with irrelevant content.
 - Creating fake accounts for fraudulent purposes.
@@ -298,6 +304,7 @@ Mitigation strategies include content moderation, spam detection mechanisms, and
 
 
 ### Error Case Diagram
+![image](https://github.com/user-attachments/assets/d248c210-8e33-4bf3-a92f-93c0830ef41b)
 The Error Case Diagram illustrates scenarios such as:
 - Server unavailability.
 - Content upload failures.
