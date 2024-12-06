@@ -8,6 +8,93 @@ The purpose of this Software Design Description (SDD) is to provide a detailed d
 ### 1.2 Scope
 The Pinterest clone system enables users to discover, save, and share visual content via a mobile app. Users can create boards, pin images, and explore content shared by others. The system includes the mobile application, backend API services, image processing, real-time communication, and external integration with services like cloud storage and email gateways.
 
+## 3. Architecture Design
+
+### 3.1 Architecture Components
+
+#### **User Interfaces**
+
+##### Mobile App (Frontend)
+- **Home Screen**: Displays recommended pins and boards.
+- **Explore Screen**: Allows users to discover content based on categories and tags.
+- **Board Management Screen**: Enables users to create and manage boards.
+- **Pin Detail Screen**: Provides details of a selected pin.
+- **User Profile Screen**: Displays user details, boards, and activity.
+
+#### **Backend System**
+- **API Gateway**: Acts as the single entry point for requests, routing them to appropriate backend services.
+- **Authentication Service**: Handles user registration, login, and password recovery.
+- **Pin Management Service**: Manages pin creation, updates, and recommendations.
+- **Image Processing Service**: Optimizes and stores uploaded images using external cloud storage.
+- **Notification Service**: Sends notifications for activities like comments, likes, and new followers.
+
+#### **Admin Dashboard**
+- **User Management**: Allows the admin to manage users (suspend accounts, resolve issues).
+- **Content Moderation**: Enables moderation of pins and boards flagged by users.
+- **Analytics Dashboard**: Provides insights into user activity, popular content, and system performance.
+
+### 3.2 Backend Services
+
+#### **Authentication**
+- Secure login and token-based authentication using JWT.
+- Manages user roles and permissions.
+
+#### **Pin and Board Management**
+- Handles the lifecycle of pins, including creation, updates, and deletion.
+- Organizes content into boards and allows user collaboration on shared boards.
+- Implements recommendation algorithms for personalized content discovery.
+
+#### **Image Processing and Storage**
+- Optimizes images for faster loading.
+- Integrates with cloud storage services like AWS S3 or Google Cloud Storage.
+
+#### **Real-time Notifications**
+- WebSocket-based communication for real-time updates (e.g., likes, comments).
+- Push notifications for mobile alerts.
+
+### 3.3 Databases
+
+#### **NoSQL Database (MongoDB)**
+- Stores structured data like user profiles, pins, boards, and notifications.
+
+#### **Redis**
+- Caches frequently accessed data such as recommended pins and user sessions.
+
+### 3.4 External APIs
+
+- **Cloud Storage APIs**: For image upload and retrieval (e.g., AWS S3, Google Cloud Storage).
+- **Email Gateway APIs**: For sending verification emails and activity notifications (e.g., SendGrid, Postmark).
+- **Analytics APIs**: For user behavior tracking and insights (e.g., Google Analytics).
+
+### 3.5 Infrastructure
+
+#### **Hosting**
+- Uses cloud platforms like AWS or Google Cloud for backend services and databases.
+
+#### **Load Balancer**
+- Distributes traffic across multiple servers using tools like AWS ELB or Nginx.
+
+#### **Monitoring Tools**
+- Prometheus and Grafana for tracking performance and uptime.
+- Log aggregation using tools like Elasticsearch and Kibana.
+
+#### **CI/CD Pipeline**
+- Automates deployments using GitHub Actions or Jenkins.
+- Includes automated testing and rollback mechanisms for reliability.
+
+### 3.6 Workflow Overview
+
+1. **User Interactions**
+   - User browses content, pins images, or creates boards via the mobile app.
+2. **Request Processing**
+   - The API Gateway forwards requests to the appropriate backend service.
+3. **Content Management**
+   - Pins are processed, stored, and made available for discovery.
+4. **Real-time Notifications**
+   - Users are notified of likes, comments, and follower activities in real-time.
+5. **Admin Oversight**
+   - Admin dashboard monitors content, user activity, and system performance.
+
 ## 4. Module Design
 
 ### 4.1 Mobile Application (Frontend)
