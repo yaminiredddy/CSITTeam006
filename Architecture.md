@@ -1,4 +1,4 @@
-# Pinterest Clone Architecture
+# Pinterest  Architecture
 
 ## 1. System Context Diagram
 ![System Context Diagram](system_context_diagram.png)
