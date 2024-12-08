@@ -68,24 +68,6 @@ The Pinterest Clone application will be designed to provide the following featur
 
 ---
 
-### **2.2 Admin Users**  
-
-#### **Responsibilities:**  
-- Manage platform content and oversee user activity.  
-- Handle reported content and disputes.  
-- Monitor platform performance through analytics dashboards.  
-
-#### **Technical Proficiency:**  
-- **Level:** Intermediate to advanced. Admins are expected to understand advanced dashboard features and content moderation tools.  
-
-#### **Admin Goals & Expectations:**  
-- Tools for content moderation (reporting, flagging, deleting).  
-- Real-time monitoring and data insights.  
-- User management tools (account suspension, bans).  
-- Analytics reports for assessing platform performance.  
-
----
-
 ## **3. Functional Requirements**  
 
 ### **3.1 User Registration and Authentication**  
